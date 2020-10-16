@@ -6,7 +6,7 @@ import cors from 'cors'
 //app config 
 const app=express()
 const port =process.env.PORT|| 9000;
-
+// put your pusher info
 const pusher = new Pusher({
     appId: process.env.appId,
     key:process.env.key ,
@@ -24,6 +24,7 @@ app.use(cors())
 //     next()
 // })
 
+// put your mongoconnection url
 const connection_url=process.env.key
 
 mongoose.connect(connection_url,{
